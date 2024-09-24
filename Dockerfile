@@ -16,7 +16,7 @@ FROM openjdk:17-jdk-alpine
 WORKDIR /app
 
 # Copy the built JAR file from the previous stage to the container
-COPY --from=build /app/target/*.jar app.jar
+COPY target/*.jar app.jar
 
 # Set the command to run the application
 CMD ["java", "-jar", "app.jar"]
