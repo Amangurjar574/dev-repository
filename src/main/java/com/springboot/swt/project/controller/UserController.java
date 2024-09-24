@@ -123,11 +123,12 @@ public class UserController {
 
 	// finding user by email for otp verification
 	@RequestMapping("/otp")
-	public ModelAndView demo(@ModelAttribute("user") User user, String purpose) { // purpose string is added for otp and regis 
+	public ModelAndView demo(@ModelAttribute("user") User user, String purpose) { // purpose string is added for otp and
+																					// regis
 		ModelAndView modal = new ModelAndView();
 
-		if (purpose.equals("regis") || userserviceimpl.finder(user)) {			
-			userserviceimpl.otpSend(user.getEmail(), purpose);			// otp sending according to purpose
+		if (purpose.equals("regis") || userserviceimpl.finder(user)) {
+			userserviceimpl.otpSend(user.getEmail(), purpose); // otp sending according to purpose
 			modal.addObject("user69", user);
 			modal.addObject("purpose", purpose);
 			modal.setViewName("forward:/views/Otp.jsp");
@@ -144,8 +145,16 @@ public class UserController {
 			@RequestParam String otp, String purpose) {
 
 		Map<String, Object> response = new HashMap<>();
-		Object user = userserviceimpl.getUser(user1.getEmail(), purpose); // retriving user for otp check using purpose 
-		String userOtp = (user instanceof TempUser) ? ((TempUser) user).getOtp() : ((User) user).getOtp(); // getting the otp from corresponding user weather it is tempuser of User
+		Object user = userserviceimpl.getUser(user1.getEmail(), purpose); // retriving user for otp check using purpose
+		String userOtp = (user instanceof TempUser) ? ((TempUser) user).getOtp() : ((User) user).getOtp(); // getting
+																											// the otp
+																											// from
+																											// corresponding
+																											// user
+																											// weather
+																											// it is
+																											// tempuser
+																											// of User
 
 		if (userOtp.equals(otp)) {
 			if (purpose.equals("regis")) {
@@ -153,7 +162,7 @@ public class UserController {
 				response.put("success", "successfully registered");
 				response.put("redirectUrl", "/swt/login?success=Email is registered");
 			} else {
-				
+
 				response.put("success", true);
 				response.put("redirectUrl", "/views/PasswordReset.jsp?email=" + user1.getEmail());
 			}
@@ -221,7 +230,7 @@ public class UserController {
 	@RequestMapping("/tempregis")
 	public ModelAndView tempRegistration(@ModelAttribute("user") User user,
 			RedirectAttributes redirectAttributes) {
-		Map<String, Object> result = userserviceimpl.tempRegister(user);  	// saves the data in temprory table 
+		Map<String, Object> result = userserviceimpl.tempRegister(user); // saves the data in temprory table
 		ModelAndView modal = new ModelAndView();
 
 		String message = (String) result.get("message");
@@ -232,10 +241,11 @@ public class UserController {
 			return modal;
 		}
 		modal.addObject("user", user);
-		modal.addObject("success", message); 
+		modal.addObject("success", message);
 
-		redirectAttributes.addFlashAttribute("user", user);	 	 	// used flash attributes to transfer the data from one controller to other 
+		redirectAttributes.addFlashAttribute("user", user); // used flash attributes to transfer the data from one
+															// controller to other
 		redirectAttributes.addFlashAttribute("success", message);
-		return demo(user, "regis");				// another controller is called 
+		return demo(user, "regis"); // another controller is called
 	}
 }

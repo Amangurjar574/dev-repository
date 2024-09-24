@@ -1,7 +1,8 @@
 <%@ page import="com.springboot.swt.project.entity.User" %>
 
     <%@ page import="com.springboot.swt.project.entity.User,java.util.ArrayList" %>
-        <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
+
+        <%@ page import="java.nio.charset.StandardCharsets" %>
             <!DOCTYPE html>
             <html>
 
@@ -15,145 +16,36 @@
                     <div class="py-4">
                         <div class="row">
                             <section class="col py-4">
-                                Active batches
-                                <div class="row">
-                                    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                                        <div class="card ">
-                                            <div class=" card-body p-3">
-                                                <div class="row">
-
-                                                    <div class="col-8">
-                                                        <div class="numbers">
-                                                            <p class="text-sm mb-0 font-weight-bold">C/C++</p>
-                                                            <h5 class="font-weight-bolder">986</h5>
-                                                            <p class="mb-0">
-                                                                <span
-                                                                    class="text-success text-sm font-weight-bolder">100%</span>
-                                                                since Today
-                                                                <a class="bg-gradient-warning btn text-light mt-1"
-                                                                    onclick="batchDetails(this); changeColor(this);">View</a>
-                                                            </p>
-                                                        </div>
-
-
-                                                    </div>
-                                                    <div class="col-4 text-end">
-                                                        <div
-                                                            class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
-                                                            <i class="fa-solid fa-list-check text-light text-lg opacity-10"
-                                                                aria-hidden="true"></i>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                                        <div class="card">
-                                            <div class="card-body p-3">
-                                                <div class="row">
-                                                    <div class="col-8">
-                                                        <div class="numbers">
-                                                            <p class="text-sm mb-0 font-weight-bold">core Java</p>
-                                                            <h5 class="font-weight-bolder">986</h5>
-                                                            <p class="mb-0">
-                                                                <span
-                                                                    class="text-success text-sm font-weight-bolder">100%</span>
-                                                                since Today
-                                                                <a class="bg-gradient-warning btn text-light mt-1"
-                                                                    onclick="batchDetails(this); changeColor(this);">View</a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-4 text-end">
-                                                        <div
-                                                            class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
-                                                            <i class="fa-solid fa-list-check text-light text-lg opacity-10"
-                                                                aria-hidden="true"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                                        <div class="card">
-                                            <div class="card-body p-3">
-                                                <div class="row">
-                                                    <div class="col-8">
-                                                        <div class="numbers">
-                                                            <p class="text-sm mb-0 font-weight-bold">Advance Java</p>
-                                                            <h5 class="font-weight-bolder">986</h5>
-                                                            <p class="mb-0">
-                                                                <span
-                                                                    class="text-success text-sm font-weight-bolder">100%</span>
-                                                                since Today
-                                                                <a class="bg-gradient-warning btn text-light mt-1"
-                                                                    onclick="batchDetails(this); changeColor(this);">View</a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-4 text-end">
-                                                        <div
-                                                            class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
-                                                            <i class="fa-solid fa-list-check text-light text-lg opacity-10"
-                                                                aria-hidden="true"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                                        <div class="card">
-                                            <div class="card-body p-3">
-                                                <div class="row">
-                                                    <div class="col-8">
-                                                        <div class="numbers">
-                                                            <p class="text-sm mb-0 font-weight-bold">DSA</p>
-                                                            <h5 class="font-weight-bolder">986</h5>
-                                                            <p class="mb-0">
-                                                                <span
-                                                                    class="text-success text-sm font-weight-bolder">100%</span>
-                                                                since Today
-                                                                <a class="bg-gradient-warning btn text-light mt-1"
-                                                                    onclick="batchDetails(this); changeColor(this);">View</a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-4 text-end">
-                                                        <div
-                                                            class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
-                                                            <i class="fa-solid fa-list-check text-light text-lg opacity-10"
-                                                                aria-hidden="true"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                <div class="footer-newsletter">
+                                    <div class="container">
+                                        <div class="row justify-content-center text-center">
+                                            <div class="col-lg-6">
+                                                <h1>Active Bactch  Record</h1>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                
+                                <div id="batchesContainer" class="row"></div>
                                 <div class="row mt-4">
-                                    <div class="col-lg-13  mb-lg-0 mb-4">
+                                    <div class="col-lg-12  mb-lg-0 mb-4">
                                         <div class="card z-index-2 h-100">
                                             <div class="card-header pb-0 pt-3 bg-transparent">
-                                                <h6 class="text-capitalize">completed Batches
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    Batch Name:- </h6>
+                                                <h6 class="text-capitalize">completed Batches:-</h6>
 
                                             </div>
                                             <div class="card-body p-3">
 
                                                 <div class="table-responsive">
                                                     <table class="table align-items-center " id="backtable">
-                                                        <tbody></tbody>
+
                                                     </table>
                                                     <table class="table align-items-center " id="tableid">
                                                     </table>
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </section>
@@ -191,6 +83,7 @@
 
                             /* Change text color for visibility */
                         }
+
                         .separator-line {
                             height: 1px;
                             /* Set the height */
@@ -227,7 +120,86 @@
                                 }
                                 window.onload = function () {
                                     loadBatch(null);
+                                    viewloadBatch();
                                 }
+
+                                function countActiveBatchStudent(batchId, callback) {
+                                    console.log(batchId);
+                                    $.ajax({
+                                        url: 'http://localhost:9090/admin/getAllStudentByBatchId?batchId=' + batchId,
+                                        type: 'GET',
+                                        dataType: 'json',
+                                        success: function (response) {
+                                            const count = response.length;
+                                            console.log('Count of students:', count);
+                                            callback(count); // Call the callback with the count
+                                        },
+                                        error: function (error) {
+                                            console.error('Error:', error);
+                                            callback("not found"); // Call the callback with an error message
+                                        }
+                                    });
+                                }
+
+                                
+
+                                function viewloadBatch() {
+                                    $.ajax({
+                                        url: 'http://localhost:9090/admin/findActivebatches',
+                                        type: 'GET',
+                                        dataType: 'json',
+                                        success: function (response) {
+                                            $('#batchesContainer').empty();
+
+                                            if (Array.isArray(response) && response.length > 0) {
+                                                response.forEach(batch => {
+                                                    const cid=batch.batchId;
+                                                    // Call countActiveBatchStudent with a callback
+                                                    countActiveBatchStudent(cid,function (count) {
+                                                        // Construct the card HTML inside the callback
+                                                        const cardHtml = `
+                            <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                                <div class="card">
+                                    <div class="card-body p-3">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <div class="numbers">
+                                                    <p class="text-sm mb-0 font-weight-bold">`+ batch.batchTopic + `</p>
+                                                    <h5 class="font-weight-bolder">`+ count + `</h5>
+                                                    <p class="mb-0">
+                                                        <span class="text-success text-sm font-weight-bolder">100%</span>
+                                                        since Today
+                                                        <a class="bg-gradient-warning btn text-light mt-1"  
+                                                           onclick="batchDetails(`+ batch.batchId + `); changeColor(this);">View</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 text-end">
+                                                <div class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
+                                                    <i class="fa-solid fa-list-check text-light text-lg opacity-10" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+
+                                                        // Append the card to the container
+                                                        $('#batchesContainer').append(cardHtml);
+                                                    });
+                                                });
+                                            } else {
+                                                $('#batchesContainer').append('<div class="footer-newsletter"><div class="container"><div class="row justify-content-center text-center"><div class="col-lg-6"><h1>No  Available</h1></div></div></div></div>');
+                                            }
+                                        },
+                                        error: function (error) {
+                                            console.error('Error:', error);
+                                            $('#batchesContainer').append('<p>Error loading batches. Please try again.</p>');
+                                        }
+                                    });
+                                }
+
                                 function loadBatch(element) {
                                     changeColor(element);
 
@@ -245,12 +217,10 @@
                                                 newRow.append(
                                                     batch.currentStatus === "Completed" ? $('<td>').html('<p class="text-xs font-weight-bold mb-0">Name:</p><h6 class="text-sm mb-0">' + batch.batchTopic + '</h6>') : null,
                                                     batch.currentStatus === "Completed" ? $('<td>').html('<p class="text-xs font-weight-bold mb-0">batch status </p><h6 class="text-sm mb-0">' + batch.currentStatus + '</h6>') : null,
+                                                    batch.currentStatus === "Completed" ? $('<td>').html('<p class="text-xs font-weight-bold mb-0">batchId</p><h6 class="text-sm mb-0">' + batch.batchId + '</h6>') : null,
                                                     batch.currentStatus === "Completed" ? $('<td>').html('<p class="text-xs font-weight-bold mb-0">start date  </p><h6 class="text-sm mb-0">' + batch.startDate + '</h6>') : null,
-                                                    batch.currentStatus === "Completed" ? $('<td>').html('<p class="text-xs font-weight-bold mb-0">end date  </p><h6 class="text-sm mb-0">' + batch.endbatch + '</h6>') : null,
-                                                    // batch.currentStatus === "Enroll" ? $('<td>').html('<button type="button" class="btn btn-outline-success" onclick="startbatch(\'' + batch.batchId + '\')">Start</button>') : null,
-                                                    // batch.currentStatus === "Enroll" ? $('<td>').html('<button type="button" class="btn btn-outline-danger" onclick="deletebatch(\'' + batch.batchId + '\')">delete</button>') : null,
-                                                    // batch.currentStatus === "Active" ? $('<td>').html('<button type="button" class="btn btn-outline-danger" onclick="endbatch(\'' + batch.batchId + '\')">end</button>') : null,
-                                                    batch.currentStatus === "Completed" ? $('<td>').html('<a class="btn btn-outline-info"  onclick="batchDetails(null)">Details</a>') : null
+                                                    batch.currentStatus === "Completed" ? $('<td>').html('<p class="text-xs font-weight-bold mb-0">end date  </p><h6 class="text-sm mb-0">' + batch.endDate + '</h6>') : null,
+                                                    batch.currentStatus === "Completed" ? $('<td>').html('<a class="btn btn-outline-info"  onclick="batchDetails(\'' + batch.batchId + '\')">Details</a>') : null
                                                 );
                                                 // Append the new row to the table
                                                 $('#tableid').append(newRow);
@@ -266,8 +236,9 @@
                                     });
 
                                 }
-                                function batchDetails() {
 
+                                function batchDetails(batchId) {
+                                    console.log("batchid=>" + batchId);
                                     $('#backtable').empty();
                                     // Create a new row
                                     const backRow = $('<tr>');
@@ -277,117 +248,52 @@
                                     );
                                     // Append the new row to the table
                                     $('#backtable').append(backRow);
-
                                     $.ajax({
-                                        url: 'http://localhost:9090/admin/getBatch',
+                                        url: 'http://localhost:9090/admin/getAllStudentByBatchId?batchId=' + batchId,
                                         type: 'GET',
                                         dataType: 'json', // No need to parse the response manually
                                         success: function (response) {
                                             // Clear the existing table body to prevent duplicates
                                             $('#tableid').empty();
-
+                                            var check = true;
+                                            console.log(response);
                                             // Iterate over the response and append rows
                                             response.forEach(batch => {
+                                                check = false;
                                                 const newRow = $('<tr>').attr('id', batch.batchid);
                                                 newRow.append(
-                                                    batch.currentStatus === "Completed" ? $('<td>').html('<p class="text-xs font-weight-bold mb-0">Name:</p><h6 class="text-sm mb-0">' + batch.batchTopic + '</h6>') : null,
-                                                    batch.currentStatus === "Completed" ? $('<td>').html('<a class="btn btn-outline-info" href="/admin/getBatchDetails?id=' + batch.batchid + '">Details</a>') : null
+                                                    $('<td>').html('<p class="text-xs font-weight-bold mb-0">rollNo:</p><h6 class="text-sm mb-0">' + batch.rollNo + '</h6>'),
+                                                    $('<td>').html('<p class="text-xs font-weight-bold mb-0">Name:</p><h6 class="text-sm mb-0">' + batch.user.name + '</h6>'),
+                                                    $('<td>').html('<p class="text-xs font-weight-bold mb-0">Id:</p><h6 class="text-sm mb-0">' + batch.user.id + '</h6>'),
+                                                    $('<td>').html('<p class="text-xs font-weight-bold mb-0">ContactNo:</p><h6 class="text-sm mb-0">' + batch.user.contactNo + '</h6>'),
+                                                    $('<td>').html('<p class="text-xs font-weight-bold mb-0">attendanceCount Present:</p><h6 class="text-sm mb-0">' + batch.attendanceCount + '</h6>'),
+                                                    $('<td>').html('<a class="btn btn-outline-info" href="#' + batch.batchid + '">Details</a>')
                                                 );
                                                 // Append the new row to the table
                                                 $('#tableid').append(newRow);
-                                                // const separatorRow = $('<tr>').append(
-                                                //     $('<td colspan="1" class="separator-line"/>') // Use a CSS class for styling
-                                                // );
-                                                // $('#tableid').append(separatorRow);
+
                                             });
+                                            if (check) {
+                                                const newRow = $('<tr>');
+                                                $('#tableid').empty();
+                                                newRow.append(
+                                                    $('<td>').html(' <h2 class="text-sm mb-0 "> not availeble student ..  </h2>'));
+                                                $('#tableid').append(newRow);
+                                            }
                                         },
                                         error: function (error) {
                                             console.error('Error:', error);
+                                            const newRow = $('<tr>');
+                                            $('#tableid').empty();
+                                            newRow.append(
+                                                $('<td>').html(' <h6 class="text-sm mb-0 "> page not found  Error : 404 </h6>'));
+                                            $('#tableid').append(newRow);
                                         }
                                     });
 
                                 }
-                                var ctx1 = document.getElementById("chart-line").getContext("2d");
-                                var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
 
-                                gradientStroke1.addColorStop(1, 'rgba(94, 114, 228, 0.2)');
-                                gradientStroke1.addColorStop(0.2, 'rgba(94, 114, 228, 0.0)');
-                                gradientStroke1.addColorStop(0, 'rgba(94, 114, 228, 0)');
-                                new Chart(ctx1, {
-                                    type: "line",
-                                    data: {
-                                        labels: ["Week1", "Week2", "Week3", "Week4", "Week5",
-                                            "Week6", "Week7", "Week8"],
-                                        datasets: [{
-                                            label: "Marks Progress",
-                                            tension: 0.4,
-                                            borderWidth: 0,
-                                            pointRadius: 0,
-                                            borderColor: "#5e72e4",
-                                            backgroundColor: gradientStroke1,
-                                            borderWidth: 3,
-                                            fill: true,
-                                            data: [50, 40, 60, 20, 95, 89, 73, 30],
-                                            maxBarThickness: 6
 
-                                        }],
-                                    },
-                                    options: {
-                                        responsive: true,
-                                        maintainAspectRatio: false,
-                                        plugins: {
-                                            legend: {
-                                                display: false,
-                                            }
-                                        },
-                                        interaction: {
-                                            intersect: false,
-                                            mode: 'index',
-                                        },
-                                        scales: {
-                                            y: {
-                                                grid: {
-                                                    drawBorder: false,
-                                                    display: true,
-                                                    drawOnChartArea: true,
-                                                    drawTicks: false,
-                                                    borderDash: [5, 5]
-                                                },
-                                                ticks: {
-                                                    display: true,
-                                                    padding: 10,
-                                                    color: '#fbfbfb',
-                                                    font: {
-                                                        size: 11,
-                                                        family: "Open Sans",
-                                                        style: 'normal',
-                                                        lineHeight: 2
-                                                    },
-                                                }
-                                            },
-                                            x: {
-                                                grid: {
-                                                    drawBorder: false,
-                                                    display: false,
-                                                    drawOnChartArea: false,
-                                                    drawTicks: false,
-                                                    borderDash: [5, 5]
-                                                },
-                                                ticks: {
-                                                    display: true,
-                                                    color: '#ccc',
-                                                    padding: 20,
-                                                    font: {
-                                                        size: 11,
-                                                        family: "Open Sans",
-                                                        style: 'normal',
-                                                        lineHeight: 2
-                                                    },
-                                                }
-                                            },
-                                        },
-                                    },
-                                });
                             </script>
             </body>
 

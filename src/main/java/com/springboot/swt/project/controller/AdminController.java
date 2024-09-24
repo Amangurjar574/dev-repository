@@ -168,4 +168,18 @@ public class AdminController {
 	public ResponseEntity getBatch(Model model, HttpServletRequest request) {
 		return new ResponseEntity<>(batchservicesimpl.sendAllBatches(), HttpStatus.OK);
 	}
+
+	@RequestMapping("/getAllStudentByBatchId")
+	public ResponseEntity getAllStudent(@RequestParam("batchId") String batchId) {
+		System.out.println(studentServiceImpl.findByBatch(batchId));
+		return new ResponseEntity<>(studentServiceImpl.findByBatch(batchId), HttpStatus.OK);
+	}
+
+	@RequestMapping("/findActivebatches")
+	public ResponseEntity findActivebatches(HttpServletRequest session) {
+		List<Batch> batchlist = batchservicesimpl.findByCurrentStatus("Active");
+
+		return new ResponseEntity(batchlist, HttpStatus.OK);
+	}
+
 }
