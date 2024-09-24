@@ -15,6 +15,10 @@ FROM openjdk:17-jdk-alpine
 # Set the working directory
 WORKDIR /app
 
+# Copy JSP files to the appropriate directory
+COPY src/main/webapp/views /usr/local/tomcat/webapps/views
+
+
 # Copy the built JAR file from the previous stage to the container
 COPY target/*.jar app.jar
 
