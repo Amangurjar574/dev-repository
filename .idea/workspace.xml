@@ -5,32 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7f29ba6-1492-402b-a8f2-934a5133d7de" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/Service/BatchService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/Service/BatchService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/Service/EmailSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/Service/EmailSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/Service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/Service/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/Service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/Service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/ServiceImpl/BatchServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/ServiceImpl/BatchServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/ServiceImpl/EmailSenderImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/ServiceImpl/EmailSenderImpl$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/ServiceImpl/EmailSenderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/ServiceImpl/EmailSenderImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/ServiceImpl/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/ServiceImpl/StudentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/ServiceImpl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/ServiceImpl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/SoftwavesApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/SoftwavesApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/swt/project/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/swt/project/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/AllStudentDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/AllStudentDetails.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/controller/ViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/controller/ViewController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/controller/VolunteerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/controller/VolunteerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/entity/Attendance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/entity/Attendance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/entity/Batch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/entity/Batch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/entity/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/entity/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/entity/TempUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/entity/TempUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/repo/BatchRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/repo/BatchRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/repo/StudentRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/repo/StudentRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/repo/TempUserRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/repo/TempUserRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/repo/UserRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/repo/UserRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/utilities/Permision.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/swt/project/utilities/Permision.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +33,15 @@
     "Application.SoftwavesApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "neeraj-dev",
+    "git-widget-placeholder": "aman-dev",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Abc/OneDrive/Desktop/New folder (3)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "advanced.settings"
+    "settings.editor.selected.configurable": "advanced.settings",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
@@ -83,7 +62,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
       </set>
     </attachedChunks>
   </component>
@@ -95,6 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1726557654773</updated>
+      <workItem from="1727034418234" duration="87000" />
     </task>
     <servers />
   </component>
